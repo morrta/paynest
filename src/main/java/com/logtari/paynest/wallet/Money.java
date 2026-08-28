@@ -34,7 +34,7 @@ public final class Money {
         return new Money(amount.add(moneyToAdd.getAmount()), currency);
     }
 
-    public Money substract(Money moneyToSubstract) {
+    public Money subtract(Money moneyToSubstract) {
         requireSameCurrency(moneyToSubstract);
         if (amount.compareTo(moneyToSubstract.amount) < 0) {
             throw new IllegalArgumentException("Resulting money from substaction cannot be negative");
