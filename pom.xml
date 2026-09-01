@@ -30,6 +30,7 @@
         <java.version>21</java.version>
         <junit.version>5.11.0</junit.version>
         <assertj.version>3.26.3</assertj.version>
+        <apache.common.lang.version>3.20.0</apache.common.lang.version>
     </properties>
     <dependencies>
         <dependency>
@@ -64,6 +65,12 @@
             <artifactId>assertj-core</artifactId>
             <version>${assertj.version}</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${apache.common.lang.version}</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 
