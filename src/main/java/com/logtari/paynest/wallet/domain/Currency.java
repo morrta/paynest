@@ -1,4 +1,4 @@
-package com.logtari.paynest.wallet;
+package com.logtari.paynest.wallet.domain;
 
 public enum Currency {
     EUR,

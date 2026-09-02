@@ -1,4 +1,4 @@
-package com.logtari.paynest.wallet;
+package com.logtari.paynest.wallet.domain;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
