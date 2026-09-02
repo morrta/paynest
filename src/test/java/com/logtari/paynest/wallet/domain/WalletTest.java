@@ -1,5 +1,6 @@
 package com.logtari.paynest.wallet.domain;
 
+import com.logtari.paynest.wallet.domain.exceptions.InsufficientFundsException;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
@@ -92,7 +93,7 @@ public class WalletTest {
                         Money.euros(new BigDecimal("150"))
                 )
         )
-                .isInstanceOf(IllegalArgumentException.class);
+                .isInstanceOf(InsufficientFundsException.class);
     }
 
     @Test

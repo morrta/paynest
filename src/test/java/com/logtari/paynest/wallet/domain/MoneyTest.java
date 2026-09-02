@@ -13,22 +13,22 @@ public class MoneyTest {
     void shouldCreateMoneyInEuros() {
         Money money = Money.euros(new BigDecimal("100.00"));
 
-        assertThat(money.getAmount()).isEqualByComparingTo("100.00");
-        assertThat(money.getCurrency()).isEqualTo(Currency.EUR);
+        assertThat(money.amount()).isEqualByComparingTo("100.00");
+        assertThat(money.currency()).isEqualTo(Currency.EUR);
     }
 
     @Test
     void shouldCreateMoneyInUSD(){
         Money money = Money.dollars(new BigDecimal("100.00"));
-        assertThat(money.getAmount()).isEqualByComparingTo("100.00");
-        assertThat(money.getCurrency()).isEqualTo(Currency.USD);
+        assertThat(money.amount()).isEqualByComparingTo("100.00");
+        assertThat(money.currency()).isEqualTo(Currency.USD);
     }
 
     @Test
     void shouldAllowZeroMoney() {
         Money money = Money.euros(BigDecimal.ZERO);
 
-        assertThat(money.getAmount())
+        assertThat(money.amount())
                 .isEqualByComparingTo("0");
     }
 

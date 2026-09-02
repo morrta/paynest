@@ -1,5 +1,6 @@
 package com.logtari.paynest.wallet.domain;
 
+import com.logtari.paynest.wallet.domain.exceptions.InsufficientFundsException;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
@@ -27,6 +28,10 @@ public final class Wallet {
 
     public void withdraw(Money amountToWithdraw){
         Objects.requireNonNull(amountToWithdraw, "withdrawal amount must not be null");
+       balance.requireSameCurrency(amountToWithdraw);
+       if(amountToWithdraw.amount().compareTo(balance.amount()) > 0){
+            throw new InsufficientFundsException();
+       }
         balance = balance.subtract(amountToWithdraw);
     }
 }
