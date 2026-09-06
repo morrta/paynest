@@ -1,6 +1,7 @@
 package com.logtari.paynest.wallet.domain;
 
 import com.logtari.paynest.wallet.domain.exceptions.InsufficientFundsException;
+import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
@@ -14,6 +15,7 @@ public final class Wallet {
     private final CustomerId ownerId;
     private Money balance;
 
+    @Builder
     public Wallet(WalletId walletId, CustomerId ownerId) {
         this.walletId = Objects.requireNonNull(walletId, "Wallet ID must not be null");
         this.ownerId = Objects.requireNonNull(ownerId, "Owner ID must not be null");
