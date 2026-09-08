@@ -13,7 +13,7 @@ public class CustomerTest {
         Customer customer = new Customer(id, "Mohamed");
 
         assertThat(customer.customerId()).isEqualTo(id);
-        assertThat(customer.name()).isEqualTo("Mohamed");
+        assertThat(customer.customerName()).isEqualTo("Mohamed");
     }
 
     @Test

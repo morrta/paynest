@@ -7,8 +7,6 @@ import com.logtari.paynest.wallet.domain.WalletId;
 import com.logtari.paynest.wallet.domain.exceptions.WalletNotFoundException;
 import org.springframework.stereotype.Service;
 
-import java.util.Optional;
-
 @Service
 public class WithdrawMoneyService {
     private final WalletRepository walletRepository;
