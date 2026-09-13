@@ -5,7 +5,7 @@ import com.logtari.paynest.wallet.domain.Wallet;
 
 
 public final class WalletMapper {
-    public static WalletResponse from(Wallet wallet){
+    public static WalletResponse from(Wallet wallet) {
         return WalletResponse.builder()
                 .walletId(wallet.getWalletId().toString())
                 .customerId(wallet.getOwnerId().toString())
