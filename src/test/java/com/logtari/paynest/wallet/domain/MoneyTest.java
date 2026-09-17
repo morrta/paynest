@@ -73,6 +73,21 @@ public class MoneyTest {
     }
 
     @Test
+    void shouldAddMoneyOfSameCurrency() {
+
+        Money first = Money.euros(new BigDecimal("100.00"));
+        Money second = Money.euros(new BigDecimal("50.00"));
+
+        Money result = first.add(second);
+
+        assertThat(result.amount())
+                .isEqualByComparingTo("150.00");
+
+        assertThat(result.currency())
+                .isEqualTo(Currency.EUR);
+    }
+
+    @Test
     void shouldRejectAddingDifferentCurrencies() {
         Money eur = new Money(
                 new BigDecimal("100"),

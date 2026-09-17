@@ -7,9 +7,9 @@ import com.logtari.paynest.wallet.domain.Wallet;
 public final class WalletMapper {
     public static WalletResponse from(Wallet wallet) {
         return WalletResponse.builder()
-                .walletId(wallet.getWalletId().toString())
-                .customerId(wallet.getOwnerId().toString())
-                .balance(wallet.getBalance().toString())
+                .walletId(wallet.getWalletId().walletId().toString())
+                .customerId(wallet.getOwnerId().customerId().toString())
+                .balance(wallet.getBalance().amount().toPlainString())
                 .currency(wallet.getBalance().currency().name())
                 .build();
     }

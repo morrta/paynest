@@ -7,10 +7,12 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+import static org.springframework.http.HttpStatus.*;
+
 @RestControllerAdvice
 public class ApiExceptionHandler {
     @ExceptionHandler(WalletNotFoundException.class)
-    @ResponseStatus(HttpStatus.NOT_FOUND)
+    @ResponseStatus(NOT_FOUND)
     public ErrorResponse handleWalletNotFound(
             WalletNotFoundException exception
     ) {
@@ -21,7 +23,7 @@ public class ApiExceptionHandler {
     }
 
     @ExceptionHandler(InsufficientFundsException.class)
-    @ResponseStatus(HttpStatus.UNPROCESSABLE_ENTITY)
+    @ResponseStatus(UNPROCESSABLE_ENTITY)
     public ErrorResponse handleInsufficientFunds(
             InsufficientFundsException exception
     ) {
@@ -32,7 +34,7 @@ public class ApiExceptionHandler {
     }
 
     @ExceptionHandler(IllegalArgumentException.class)
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ResponseStatus(BAD_REQUEST)
     public ErrorResponse handleIllegalArgument(
             IllegalArgumentException exception
     ) {
