@@ -3,7 +3,7 @@ name: build
 on:
   push:
     branches:
-      - main
+      - master
   workflow_dispatch:
     inputs:
       tag:
@@ -29,4 +29,4 @@ jobs:
           cache: maven
 
       - name: Build and run tests
-        run: ./mvnw --batch-mode --no-transfer-progress verify
+        run: mvn clean install
