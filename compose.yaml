@@ -1,1 +1,41 @@
-services: { }
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: paynest-postgres
+    environment:
+      POSTGRES_DB: paynest
+      POSTGRES_USER: paynest
+      POSTGRES_PASSWORD: paynest
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U paynest -d paynest"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+
+  app:
+    build:
+      context: .
+    container_name: paynest-app
+    # Spring Boot's docker-compose support starts every service without a profile when
+    # the app runs locally via Maven. Keep the app behind a profile so only the
+    # dependencies start there; run the full stack with:
+    #   docker compose --profile app up --build
+    profiles: ["app"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      SPRING_DOCKER_COMPOSE_ENABLED: "false"
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/paynest
+      SPRING_DATASOURCE_USERNAME: paynest
+      SPRING_DATASOURCE_PASSWORD: paynest
+    ports:
+      - "8080:8080"
+
+volumes:
+  postgres-data:
