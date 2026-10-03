@@ -1,4 +1,4 @@
-package com.logtari.paynest.wallet.domain;
+package com.logtari.paynest.wallet.domain.customer;
 
 import java.util.Objects;
 import java.util.UUID;

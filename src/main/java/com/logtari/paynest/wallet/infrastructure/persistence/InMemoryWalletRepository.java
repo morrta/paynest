@@ -1,8 +1,8 @@
-package com.logtari.paynest.wallet.infrastructure;
+package com.logtari.paynest.wallet.infrastructure.persistence;
 
 import com.logtari.paynest.wallet.application.repository.WalletRepository;
-import com.logtari.paynest.wallet.domain.Wallet;
-import com.logtari.paynest.wallet.domain.WalletId;
+import com.logtari.paynest.wallet.domain.wallet.Wallet;
+import com.logtari.paynest.wallet.domain.wallet.WalletId;
 import org.springframework.stereotype.Repository;
 
 import java.util.Map;

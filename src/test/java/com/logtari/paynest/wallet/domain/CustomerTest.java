@@ -1,5 +1,7 @@
 package com.logtari.paynest.wallet.domain;
 
+import com.logtari.paynest.wallet.domain.customer.Customer;
+import com.logtari.paynest.wallet.domain.customer.CustomerId;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThatThrownBy;

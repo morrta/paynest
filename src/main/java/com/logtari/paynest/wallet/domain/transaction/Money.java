@@ -1,4 +1,4 @@
-package com.logtari.paynest.wallet.domain;
+package com.logtari.paynest.wallet.domain.transaction;
 
 import java.math.BigDecimal;
 import java.util.Objects;
@@ -32,7 +32,7 @@ public record Money(BigDecimal amount, Currency currency) {
         return new Money(amount.subtract(moneyToSubstract.amount), currency);
     }
 
-    void requireSameCurrency(Money otherAmount) {
+    public void requireSameCurrency(Money otherAmount) {
         Objects.requireNonNull(otherAmount, "Money amount cannot be null");
         if (currency != otherAmount.currency) {
             throw new IllegalArgumentException("Cannot operate with different currencies");

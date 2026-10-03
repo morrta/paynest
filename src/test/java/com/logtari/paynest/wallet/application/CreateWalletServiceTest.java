@@ -2,14 +2,12 @@ package com.logtari.paynest.wallet.application;
 
 import com.logtari.paynest.wallet.application.repository.WalletRepository;
 import com.logtari.paynest.wallet.application.service.CreateWalletService;
-import com.logtari.paynest.wallet.domain.Customer;
-import com.logtari.paynest.wallet.domain.CustomerId;
-import com.logtari.paynest.wallet.domain.Wallet;
-import com.logtari.paynest.wallet.infrastructure.InMemoryWalletRepository;
+import com.logtari.paynest.wallet.domain.customer.Customer;
+import com.logtari.paynest.wallet.domain.customer.CustomerId;
+import com.logtari.paynest.wallet.domain.wallet.Wallet;
+import com.logtari.paynest.wallet.infrastructure.persistence.InMemoryWalletRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import java.util.UUID;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

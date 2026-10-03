@@ -1,4 +1,4 @@
-package com.logtari.paynest.wallet.domain;
+package com.logtari.paynest.wallet.domain.customer;
 
 import lombok.Builder;
 import org.apache.commons.lang3.StringUtils;

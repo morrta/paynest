@@ -1,7 +1,7 @@
 package com.logtari.paynest.wallet.api.mapper;
 
 import com.logtari.paynest.wallet.api.response.WalletResponse;
-import com.logtari.paynest.wallet.domain.Wallet;
+import com.logtari.paynest.wallet.domain.wallet.Wallet;
 
 
 public final class WalletMapper {
