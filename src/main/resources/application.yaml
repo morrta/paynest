@@ -3,3 +3,8 @@ spring:
     name: paynest
   flyway:
     locations: classpath:migrations
+  jpa:
+    # Flyway owns the schema; Hibernate only checks that entities match it
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
