@@ -8,6 +8,7 @@ import lombok.RequiredArgsConstructor;
 import java.time.Instant;
 import java.util.UUID;
 
+import static com.logtari.paynest.wallet.domain.transaction.TransactionType.DEPOSIT;
 import static com.logtari.paynest.wallet.domain.transaction.TransactionType.WITHRAWAL;
 
 @Getter
@@ -19,7 +20,7 @@ public final class WalletTransaction {
     private final Money amount;
     private final Instant createdAt;
 
-    public static WalletTransaction withdrawa(WalletId walletId, Money amount){
+    public static WalletTransaction withdrawal(WalletId walletId, Money amount){
         return new WalletTransaction(
                 UUID.randomUUID(),
                 walletId,
@@ -28,5 +29,16 @@ public final class WalletTransaction {
                 Instant.now()
         );
     }
+
+    public static WalletTransaction deposit(WalletId walletId, Money amount){
+        return new WalletTransaction(
+                UUID.randomUUID(),
+                walletId,
+                DEPOSIT,
+                amount,
+                Instant.now()
+        );
+    }
+
 
 }
