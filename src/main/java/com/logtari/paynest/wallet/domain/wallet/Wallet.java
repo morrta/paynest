@@ -2,8 +2,6 @@ package com.logtari.paynest.wallet.domain.wallet;
 
 import com.logtari.paynest.wallet.domain.customer.CustomerId;
 import com.logtari.paynest.wallet.domain.exceptions.InsufficientFundsException;
-import com.logtari.paynest.wallet.domain.transaction.Currency;
-import com.logtari.paynest.wallet.domain.transaction.Money;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

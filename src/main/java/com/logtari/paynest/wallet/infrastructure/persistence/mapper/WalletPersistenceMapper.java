@@ -1,8 +1,8 @@
 package com.logtari.paynest.wallet.infrastructure.persistence.mapper;
 
 import com.logtari.paynest.wallet.domain.customer.CustomerId;
-import com.logtari.paynest.wallet.domain.transaction.Currency;
-import com.logtari.paynest.wallet.domain.transaction.Money;
+import com.logtari.paynest.wallet.domain.wallet.Currency;
+import com.logtari.paynest.wallet.domain.wallet.Money;
 import com.logtari.paynest.wallet.domain.wallet.Wallet;
 import com.logtari.paynest.wallet.domain.wallet.WalletId;
 import com.logtari.paynest.wallet.infrastructure.persistence.entity.WalletEntity;

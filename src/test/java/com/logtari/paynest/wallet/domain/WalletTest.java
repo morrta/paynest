@@ -2,7 +2,7 @@ package com.logtari.paynest.wallet.domain;
 
 import com.logtari.paynest.wallet.domain.customer.CustomerId;
 import com.logtari.paynest.wallet.domain.exceptions.InsufficientFundsException;
-import com.logtari.paynest.wallet.domain.transaction.Money;
+import com.logtari.paynest.wallet.domain.wallet.Money;
 import com.logtari.paynest.wallet.domain.wallet.Wallet;
 import com.logtari.paynest.wallet.domain.wallet.WalletId;
 import org.junit.jupiter.api.Test;

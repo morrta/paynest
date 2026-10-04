@@ -1,7 +1,7 @@
 package com.logtari.paynest.wallet.application.service;
 
 import com.logtari.paynest.wallet.application.repository.WalletRepository;
-import com.logtari.paynest.wallet.domain.transaction.Money;
+import com.logtari.paynest.wallet.domain.wallet.Money;
 import com.logtari.paynest.wallet.domain.wallet.Wallet;
 import com.logtari.paynest.wallet.domain.wallet.WalletId;
 import com.logtari.paynest.wallet.domain.exceptions.WalletNotFoundException;

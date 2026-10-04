@@ -1,7 +1,7 @@
 package com.logtari.paynest.wallet.domain;
 
-import com.logtari.paynest.wallet.domain.transaction.Currency;
-import com.logtari.paynest.wallet.domain.transaction.Money;
+import com.logtari.paynest.wallet.domain.wallet.Currency;
+import com.logtari.paynest.wallet.domain.wallet.Money;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;

@@ -1,4 +1,4 @@
-package com.logtari.paynest.wallet.domain.transaction;
+package com.logtari.paynest.wallet.domain.wallet;
 
 import java.math.BigDecimal;
 import java.util.Objects;

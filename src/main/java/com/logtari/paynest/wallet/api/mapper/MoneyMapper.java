@@ -1,8 +1,8 @@
 package com.logtari.paynest.wallet.api.mapper;
 
 import com.logtari.paynest.wallet.api.request.MoneyRequest;
-import com.logtari.paynest.wallet.domain.transaction.Currency;
-import com.logtari.paynest.wallet.domain.transaction.Money;
+import com.logtari.paynest.wallet.domain.wallet.Currency;
+import com.logtari.paynest.wallet.domain.wallet.Money;
 
 public final class MoneyMapper {
     public static Money toMoney(MoneyRequest request) {

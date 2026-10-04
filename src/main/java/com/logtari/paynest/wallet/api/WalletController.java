@@ -11,7 +11,7 @@ import com.logtari.paynest.wallet.application.service.GetWalletService;
 import com.logtari.paynest.wallet.application.service.WithdrawMoneyService;
 import com.logtari.paynest.wallet.domain.customer.Customer;
 import com.logtari.paynest.wallet.domain.customer.CustomerId;
-import com.logtari.paynest.wallet.domain.transaction.Money;
+import com.logtari.paynest.wallet.domain.wallet.Money;
 import com.logtari.paynest.wallet.domain.wallet.Wallet;
 import com.logtari.paynest.wallet.domain.wallet.WalletId;
 import jakarta.validation.Valid;
