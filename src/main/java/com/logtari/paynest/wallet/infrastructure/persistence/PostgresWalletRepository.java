@@ -18,11 +18,15 @@ public class PostgresWalletRepository implements WalletRepository {
 
     @Override
     public Wallet save(Wallet wallet) {
-        return null;
+        var entity = mapper.toEntity(wallet);
+        var saved = repository.save(entity);
+
+        return mapper.toDomain(saved);
     }
 
     @Override
     public Optional<Wallet> findById(WalletId walletId) {
-        return Optional.empty();
+        return repository.findById(walletId.walletId())
+                .map(mapper::toDomain);
     }
 }
