@@ -4,6 +4,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.Version;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -30,6 +31,10 @@ public class WalletEntity {
 
     @Column(nullable = false, length = 3)
     private String currency;
+
+    @Version
+    @Column(nullable = false)
+    private long version;
 
     @CreationTimestamp
     @Column(name = "created_at", nullable = false, updatable = false)
