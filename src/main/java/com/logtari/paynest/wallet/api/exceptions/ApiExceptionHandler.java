@@ -3,6 +3,8 @@ package com.logtari.paynest.wallet.api.exceptions;
 import com.logtari.paynest.wallet.domain.exceptions.InsufficientFundsException;
 import com.logtari.paynest.wallet.domain.exceptions.WalletNotFoundException;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.orm.ObjectOptimisticLockingFailureException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
@@ -43,4 +45,17 @@ public class ApiExceptionHandler {
                 exception.getMessage()
         );
     }
+    @ExceptionHandler(
+            ObjectOptimisticLockingFailureException.class
+    )
+    ResponseEntity<ErrorResponse> handleOptimisticLocking() {
+
+        return ResponseEntity
+                .status(HttpStatus.CONFLICT)
+                .body(new ErrorResponse(
+                        "WALLET_MODIFIED_CONCURRENTLY",
+                        "Wallet was modified by another request"
+                ));
+    }
+
 }
